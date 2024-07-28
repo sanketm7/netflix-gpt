@@ -12,3 +12,4 @@ NeFlix - GPT App
 - Create account on Firebase
 - create new project
 - deploy our app to production
+- SignIn and SignUp validation
