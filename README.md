@@ -13,3 +13,8 @@ NeFlix - GPT App
 - create new project
 - deploy our app to production
 - SignIn and SignUp validation
+- Install reduxToolkit
+- create store and userSlice
+- For disaptch action onAuthstaetchnaged utility of firebase used .
+- onAuth - (when signIn ,signOut ,signUp the use this API)
+- Body.js --> using useEfect use onAuth

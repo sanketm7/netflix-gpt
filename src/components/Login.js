@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   getAuth,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
@@ -38,8 +39,21 @@ const Login = () => {
         );
         // Signed up
         const user = userCredential.user;
+
+        // Update profile firebase
+
+        updateProfile(user, {
+          displayName: name.current.value,
+          photoURL:
+            "https://images.unsplash.com/photo-1661051830189-54dfcfcf3a0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9kZWwlMjBtYW58ZW58MHx8MHx8fDA%3D",
+        })
+          .then(() => {
+            navigate("/browser");
+          })
+          .catch((error) => {
+            setErrorMessgae(error.message);
+          });
         console.log(user);
-        navigate("/browser");
         // Optionally set the user's display name
         await user.updateProfile({ displayName: name.current.value });
       } catch (error) {
