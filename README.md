@@ -21,4 +21,6 @@ NeFlix - GPT App
 - Body.js --> using useEfect use onAuth
 - implemented signOut features
 - Update profile
+  -BugFix -signUp user dispaly name and profile picture update.
+  - BUgFix - if user is not logged in redirect to browserPage directly and viceVersa.
 - TMDB website API for fetching movies

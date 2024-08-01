@@ -60,7 +60,6 @@ const Login = () => {
                 photoURL: photoURL,
               })
             );
-            navigate("/browser");
           })
           .catch((error) => {
             setErrorMessgae(error.message);
@@ -80,8 +79,8 @@ const Login = () => {
         );
         // Signed in
         const user = userCredential.user;
-        console.log(user);
-        navigate("/browser");
+
+        // navigate("/browser");
       } catch (error) {
         setErrorMessgae(error.code + " " + error.message);
       }
