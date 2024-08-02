@@ -16,11 +16,13 @@ NeFlix - GPT App
 - SignIn and SignUp validation
 - Install reduxToolkit
 - create store and userSlice
-- For disaptch action onAuthstaetchnaged utility of firebase used .
+- For disaptch action onAuthstaetchnaged utility of firebase used
 - onAuth - (when signIn ,signOut ,signUp the use this API)
 - Body.js --> using useEfect use onAuth
 - implemented signOut features
 - Update profile
-  -BugFix -signUp user dispaly name and profile picture update.
-  - BUgFix - if user is not logged in redirect to browserPage directly and viceVersa.
+- BUgFix - if user is not logged in redirect to browserPage directly and viceVersa
+  -BugFix -signUp user dispaly name and profile picture update
+- Unsubscribed onAuth state change callback
+- Add hard codes value into constant files
 - TMDB website API for fetching movies

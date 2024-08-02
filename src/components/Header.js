@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { auth } from "../utils/firebase";
 import { addUser, removeUser } from "../utils/userSlice";
+import { LOGO } from "../utils/constants";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         const { uid, email, displayName, photoURL } = user;
         dispatch(
@@ -38,14 +39,16 @@ const Header = () => {
       }
     });
     navigate("/");
+
+    return () => {
+      // Unsubscribe when component unmount
+      unSubscribe();
+    };
   }, []);
 
   return (
     <div className="absolute w-screen px-32 py-2 bg-gradient-to-b from-black z-20 flex justify-between items-center">
-      <img
-        className="w-40 "
-        src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
-      />
+      <img className="w-40 " src={LOGO} />
       {user && (
         <div className="flex p-6 gap-3 cursor-pointer items-center">
           <img
