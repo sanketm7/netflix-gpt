@@ -6,6 +6,7 @@ NeFlix - GPT App
 - use of Router
 - Login Form
 - Sign Up/ Sign In form
+- use of FIREBASE for login form validation
 - form validation
 - useRef Hook
 - form validation (Email ,Passwoed , name)
@@ -13,3 +14,15 @@ NeFlix - GPT App
 - create new project
 - deploy our app to production
 - SignIn and SignUp validation
+- Install reduxToolkit
+- create store and userSlice
+- For disaptch action onAuthstaetchnaged utility of firebase used
+- onAuth - (when signIn ,signOut ,signUp the use this API)
+- Body.js --> using useEfect use onAuth
+- implemented signOut features
+- Update profile
+- BUgFix - if user is not logged in redirect to browserPage directly and viceVersa
+  -BugFix -signUp user dispaly name and profile picture update
+- Unsubscribed onAuth state change callback
+- Add hard codes value into constant files
+- TMDB website API for fetching movies
